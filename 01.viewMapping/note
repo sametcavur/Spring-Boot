@@ -1,0 +1,16 @@
+Application Classı dışında başka bir classta daha controller falan yapacaksak bunu belirtmemiz lazım.
+Application clasına gelip "@ComponentScan(basePackageClasses = View.class)" şunun gibi spring kullana-
+cağımız classı belirtiyoruz.Yada tüm controllerları falan main paketi altında yap.
+
+Spring mvc'de kullandığımız viewResolver'ı burada application.properties filesi içinde kullandık.
+
+Pom:
+	<dependency>
+		<groupId>org.apache.tomcat.embed</groupId>
+		<artifactId>tomcat-embed-jasper</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+	</dependency>

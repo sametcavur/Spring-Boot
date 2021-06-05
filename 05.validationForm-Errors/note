@@ -1,0 +1,26 @@
+<body>
+	<form:form method="POST" modelAttribute="employee">
+	<form:errors/>   		//Bütün formu kapsayacak hata
+		<fieldset>
+			<form:label path="employeeId">Çalışan ID:</form:label>
+			<form:input path="employeeId" type="text" disabled="true" />
+			<form:errors path="employeeId"/>			//Buralarda ise field field hata olabilir bilgisi koyduk
+		</fieldset>
+		<fieldset>
+			<form:label path="employeeName">Çalışan Adı:</form:label>
+			<form:input path="employeeName" type="text" />
+			<form:errors path="employeeName"/>					//Buralarda ise field field hata olabilir bilgisi koyduk
+		</fieldset>
+		<fieldset>
+			<form:label path="employeeSurname">Çalışan Soyadı:</form:label>
+			<form:input path="employeeSurname" type="text" />
+			<form:errors path="employeeSurname"/>					//Buralarda ise field field hata olabilir bilgisi koyduk
+		</fieldset>
+		<fieldset>
+			<form:label path="employeeSalary">Çalışan Maaşı:</form:label>
+			<form:input path="employeeSalary" type="text" />
+			<form:errors path="employeeSalary" />				//Buralarda ise field field hata olabilir bilgisi koyduk
+		</fieldset>
+		<fieldset>
+			<form:button type="submit">Kayıt Ol</form:button>
+		</fieldset>

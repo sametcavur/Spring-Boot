@@ -1,0 +1,24 @@
+Web dışında herhangi bir bağımlılık eklememize gerek yok !! FAKAT xml döndüreceksen alttaki dependecyi ekle
+<!-- XML ÜRETEBİLMEK İÇİN GEREKLİ DEPENDENCY,JSON İÇİN BİRŞEY EKLEMEMİZE GEREK YOK -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.dataformat</groupId>
+		<artifactId>jackson-dataformat-xml</artifactId>
+	</dependency>
+
+	
+	
+	***CLİENT'TEKİ URL HAKKINDA***
+-BU HATAYA 1632 KEZ DÜŞTÜN ARTIK ŞU İŞİ DOĞRU YAP....! ALLTAKİ URL BİR REST VERMELİ,
+CUSTOMER CONTROLLER CLASSINDA O URLYİ GİRİNCE BİR CUSTOMER GETİRİYOR.CLİENT'TA İSE
+O JSONU ALIP BURADA KULLANIYOSUN....!!!
+	
+-XML YADA JSON FARKETMEZ CONTROLLER'DA URL'YE NE YOLLADIYSAN ONU ÇIKARTIR BURADA
+
+>>>String url = "http://localhost:8080/customer/"+id; 
+
+
+
+Ayrıca Clientte Rest yazmadığımız için classın üstündeki anotasyon @Controller olmalı
+Controller clasında ise bir rest yazdığımız için classın üstündeki anotasyon @RestController olmalı
+İkisi farklı olduğu için client işlemleri ve controller işlemlerini tek bir classta yapamayız
+Ya ikisini bir paket altında ama farklı classs yada ikisini farklı paket altında yapmalıyız.

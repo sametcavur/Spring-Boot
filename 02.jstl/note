@@ -1,0 +1,33 @@
+1.JSTL demek html kodlarının arasına else-if,for,while,switch gibi kodları yazmamızı sağlayan yardımcı kodlardır.
+
+2.JSTL i html kodlarının arasında kullanabilmek için tepeye şunu yazmalıyız.
+  // <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> //
+  
+  
+3.ÖRNEK JSTL kodları, aşağıda bir forEach döngüsü ve onun içinde de if bloğu var
+  <body>
+	<table border="1">
+		<c:forEach var="users" items="${users}">
+			<tr>
+				<td>${users.userId}</td>
+				<td>${users.userName}</td>
+				<td>${users.userSurname}</td>
+				<td>${users.birthOfDate}</td>
+				<td>
+				<c:if test="${users.userId==1}"> ID = 1</c:if>
+				<c:if test="${users.userId!=1}"> ID = 1 DEĞİL</c:if>
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+</body>
+
+
+4.application properties
+spring.mvc.view.prefix=/WEB-INF/view/
+spring.mvc.view.suffix=.jsp
+
+
+5.Application Classının tepesi
+@SpringBootApplication
+@ComponentScan(basePackageClasses = View.class)
